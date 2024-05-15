@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="bull">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/bull.zip!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
