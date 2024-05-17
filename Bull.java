@@ -17,8 +17,8 @@ public class Bull {
 		this.torso = new Torso(color, width, height);
 		this.head = new Head(color, width / 4, height / 2);
 		this.tail = new Tail(color, width /4, height / 4);
-		this.legBack = new Leg(color, width / 20, height / 2);
-		this.legFront = new Leg(color, width / 20, height / 2);
+		this.legBack = new BackLeg(color, width / 20, height / 2);
+		this.legFront = new FrontLeg(color, width / 20, height / 2);
 	}
 	
 	public void drawAt(int x, int y) {

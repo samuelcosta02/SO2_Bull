@@ -3,8 +3,8 @@ package bull;
 import java.awt.Color;
 
 public class Eye {
-	private Color color;
-	private int width, height;
+	protected Color color;
+	protected int width, height;
 	
 	public Eye(Color color, int width, int height) {
 		this.color = color;
