@@ -5,10 +5,10 @@ import java.awt.Color;
 public class Bull {
 	private Color color;
 	private int width, height;
-	private Torso torso;
-	private Head head;
-	private Tail tail;
-	private Leg legBack, legFront;
+	private Torso torso;			// composite
+	private Head head;				// composite
+	private Tail tail;				// composite
+	private Leg legBack, legFront;	// composite
 	
 	public Bull(Color color, int width, int height) {
 		this.color = color;

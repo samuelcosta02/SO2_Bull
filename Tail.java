@@ -11,7 +11,7 @@ public class Tail {
 		this.color = color;
 		this.width = width;
 		this.height = height;
-		this.hair = new Hair(color, (width * 4) / 16, (height * 4) / 8);
+		this.hair = new Hair(color, (width * 4) / 16, (height * 4) / 8);	// composite
 	}
 	public void drawAt(int x, int y) {
 		Drawing.pen().setColor(color);
