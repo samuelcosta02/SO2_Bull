@@ -32,6 +32,14 @@ public class Bull implements LocatedRectangle {
 		legFront.drawAt(x + width - width / 10, y + height);
 	}
 
+	public boolean intersects (LocatedRectangle other) {
+		boolean disjoint =
+				other.address() .x + other.width() < this.address().x ||
+						other.address().x > this.address().x + this.width() ||
+						other.address().y - other.height() > this.address().y;
+		return ! disjoint ;
+	}
+
 	public Point address () {
 		return new Point(location.x, location.y);
 	}

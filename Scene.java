@@ -13,7 +13,8 @@ public class Scene {
         for (int i = 0; i < BULLSNUMBER; i++) {
             addBull(color, width, height, RandomNumber.between(0,x), RandomNumber.between(0,y));
         }
-
+        /*addBull(color, width, height, x,y);
+        addBull(color, width, height, 500,y);*/
         for (Bull bull : bulls) {
             bull.drawAt(bull.address().x, bull.address().y);
         }
@@ -35,4 +36,5 @@ public class Scene {
             anyIntersection = anyIntersection || h.intersects (newBull);
         return ! anyIntersection ;
     }
+
 }
