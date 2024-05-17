@@ -5,7 +5,7 @@ import java.awt.Color;
 public class Torso {
 	private Color color;
 	private int width, height;
-	private Nipples nipples;
+	private Nipples nipples; // composite
 	
 	public Torso(Color color, int width, int height) {
 		this.color = color;
