@@ -11,7 +11,7 @@ public class Torso {
 		this.color = color;
 		this.width = width;
 		this.height = height;
-		this.nipples = new Nipples(3, width, height);	// composite
+		this.nipples = new Nipples(3, width, height);
 	}
 	
 	public void drawAt(int x, int y) {
