@@ -17,19 +17,19 @@ public class Bull implements LocatedRectangle {
 		this.width = width;
 		this.height = height;
 		this.location = location;
-		this.torso = new Torso(color, width, height);
-		this.head = new Head(color, width / 4, height / 2);
-		this.tail = new Tail(color, width /4, height / 4);
-		this.legBack = new BackLeg(color, width / 20, height / 2);
-		this.legFront = new FrontLeg(color, width / 20, height / 2);
+		this.torso = new Torso(color, width / 2, height / 2);
+		this.head = new Head(color, (width / 4) / 2, (height / 2) / 2);
+		this.tail = new Tail(color, (width /4) / 2, (height / 4) / 2);
+		this.legBack = new BackLeg(color, (width / 20) / 2, (height / 2) / 2);
+		this.legFront = new FrontLeg(color, (width / 20) / 2, (height / 2) / 2);
 	}
 
 	public void drawAt(int x, int y) {
 		torso.drawAt(x, y);
-		head.drawAt(x + width, y - height / 3);
-		tail.drawAt(x, y + height / 5);
-		legBack.drawAt(x + width / 20, y + height);
-		legFront.drawAt(x + width - width / 10, y + height);
+		head.drawAt(x + (width / 2), y - (height / 3) /2);
+		tail.drawAt(x, y + (height / 5) / 2);
+		legBack.drawAt(x + (width / 20) / 2, y + (height / 2));
+		legFront.drawAt(x + (width / 2) - ((width / 10) / 2), y + (height / 2));
 	}
 
 	public boolean intersects (LocatedRectangle other) {
