@@ -5,7 +5,7 @@ import java.awt.Color;
 public class Tail {
 	private Color color;
 	private int width, height;
-	private Hair hair;
+	private Hair hair; // composite
 	
 	public Tail(Color color, int width, int height) {
 		this.color = color;

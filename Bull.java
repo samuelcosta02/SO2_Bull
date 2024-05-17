@@ -9,7 +9,7 @@ public class Bull {
 	private Head head;				// composite
 	private Tail tail;				// composite
 	private Leg legBack, legFront;	// composite
-	
+
 	public Bull(Color color, int width, int height) {
 		this.color = color;
 		this.width = width;
