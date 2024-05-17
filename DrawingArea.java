@@ -16,8 +16,7 @@ public class DrawingArea extends JPanel {
 	protected void paintComponent(Graphics pen) {
 		super.paintComponent(pen);
 		Drawing.set(pen);
-		
-		Bull bull = new Bull(COLOR, WIDTH, HEIGHT);
-		bull.drawAt(X, Y);
+
+		Scene scene = new Scene(COLOR, WIDTH, HEIGHT, X, Y);
 	}
 }
