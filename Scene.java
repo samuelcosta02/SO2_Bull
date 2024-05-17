@@ -6,16 +6,16 @@ import java.awt.Point;
 
 public class Scene {
     private ArrayList<Bull> bulls = new ArrayList<Bull>();
+    private final int BULLSNUMBER = 5;
 
     public Scene(Color color, int width, int height, int x, int y){
-        addBull(color, width, height, x, y);
-        addBull(color, width, height, 300, y);
-/*        for (int i = 0; i < 3; i++) {
-            addBull(color, width, height, x, y);
-        }*/
+
+        for (int i = 0; i < BULLSNUMBER; i++) {
+            addBull(color, width, height, RandomNumber.between(0,x), RandomNumber.between(0,y));
+        }
 
         for (Bull bull : bulls) {
-            bull.drawAt(x, y);
+            bull.drawAt(bull.address().x, bull.address().y);
         }
 
     }

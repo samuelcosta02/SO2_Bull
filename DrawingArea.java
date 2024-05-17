@@ -8,8 +8,8 @@ public class DrawingArea extends JPanel {
 	private static final long serialVersionUID = 1L;
 	
 	private final Color COLOR = Color.BLACK;
-	private final int WIDTH = 500;
-	private final int HEIGHT = 300;
+	private final int WIDTH = 200;
+	private final int HEIGHT = 100;
 	private final int X = 700;
 	private final int Y = 500;
 
