@@ -5,11 +5,11 @@ import java.awt.Color;
 public class Head {
 	private Color color;
 	private int width, height;
-	private Ear earLeft, earRight;
-	private Eye eyeLeft, eyeRight;
-	private Nose nose;
-	private Mouth mouth;
-	private Horn hornLeft, hornRight;
+	private Ear earLeft, earRight; // composite
+	private Eye eyeLeft, eyeRight; // composite
+	private Nose nose; // composite
+	private Mouth mouth; // composite
+	private Horn hornLeft, hornRight; // composite
 	
 	public Head(Color color, int width, int height) {
 		this.color = color;
