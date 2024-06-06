@@ -49,7 +49,7 @@ public class DrawingTool extends JFrame implements ActionListener {
 		} else if (e.getSource() == buttons.getPostureButton()) {
 			tidyUpDrawingArea();
 			drawing.getScene().setPosture();
-		} else if (e.getSource() == buttons.getPositionButton()) {
+		} else if (e.getSource() == buttons.getColourButton()) {
 			tidyUpDrawingArea();
 			drawing.getScene().setPosition();
 		}

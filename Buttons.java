@@ -12,12 +12,12 @@ import javax.swing.JPanel;
 public class Buttons {
 	private JButton addButton = new JButton("Add a bull");
 	private JButton postureButton = new JButton("Change posture");
-	private JButton positionButton = new JButton("Change position");
+	private JButton colourButton = new JButton("Change eye colour");
 
 	public void addActionListener(ActionListener listener) {
 		addButton.addActionListener(listener);
 		postureButton.addActionListener(listener);
-		positionButton.addActionListener(listener);
+		colourButton.addActionListener(listener);
 	}
 	public void addButtonsToAPanel(JFrame frame) {
 		JPanel menu = new JPanel();
@@ -25,7 +25,7 @@ public class Buttons {
 
 		menu.add(addButton);
 		menu.add(postureButton);
-		menu.add(positionButton);
+		menu.add(colourButton);
 
 		menu.setBorder(BorderFactory.createRaisedBevelBorder());
 		frame.add(menu, BorderLayout.WEST);
@@ -39,7 +39,7 @@ public class Buttons {
 		return postureButton;
 	}
 
-	public JButton getPositionButton() {
-		return positionButton;
+	public JButton getColourButton() {
+		return colourButton;
 	}
 }
