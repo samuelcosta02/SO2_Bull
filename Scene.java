@@ -6,7 +6,7 @@ import java.awt.Point;
 
 public class Scene {
     private ArrayList<Bull> bulls = new ArrayList<Bull>();
-    private final int BULLSNUMBER = 55;
+    private final int BULLSNUMBER = 5;
 
     public Scene(Color color, int width, int height, int x, int y) {
 
@@ -17,8 +17,8 @@ public class Scene {
     }
 
     public void addBull(Color color, int width, int height, int x, int y){
-        Point coordenates = new Point(x,y);
-        Bull newBull = new Bull(color, width, height, coordenates);
+        Point coordinates = new Point(x,y);
+        Bull newBull = new Bull(color, width, height, coordinates);
 
         if ( vacantSpace(newBull) ) {
             bulls.add(newBull);
@@ -37,5 +37,13 @@ public class Scene {
     	for (Bull bull : bulls) {
             bull.drawAt(bull.address().x, bull.address().y);
         }
+    }
+
+    public void setPosture() {
+        return;
+    }
+
+    public void setPosition() {
+        return;
     }
 }
