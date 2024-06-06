@@ -6,17 +6,12 @@ import java.awt.Point;
 
 public class Scene {
     private ArrayList<Bull> bulls = new ArrayList<Bull>();
-    private final int BULLSNUMBER = 5;
+    private final int BULLSNUMBER = 55;
 
-    public Scene(Color color, int width, int height, int x, int y){
+    public Scene(Color color, int width, int height, int x, int y) {
 
         for (int i = 0; i < BULLSNUMBER; i++) {
-            addBull(color, width, height, RandomNumber.between(0,x), RandomNumber.between(0,y));
-        }
-        /*addBull(color, width, height, x,y);
-        addBull(color, width, height, 500,y);*/
-        for (Bull bull : bulls) {
-            bull.drawAt(bull.address().x, bull.address().y);
+            addBull(color, RandomNumber.between(width-20, width+100), RandomNumber.between(height-20,height+100), RandomNumber.between(0,x), RandomNumber.between(0,y));
         }
 
     }
@@ -25,8 +20,9 @@ public class Scene {
         Point coordenates = new Point(x,y);
         Bull newBull = new Bull(color, width, height, coordenates);
 
-        if ( vacantSpace(newBull) )
+        if ( vacantSpace(newBull) ) {
             bulls.add(newBull);
+        }
     }
 
     private boolean vacantSpace(Bull newBull) {
@@ -36,5 +32,10 @@ public class Scene {
             anyIntersection = anyIntersection || h.intersects (newBull);
         return ! anyIntersection ;
     }
-
+    
+    public void draw() {
+    	for (Bull bull : bulls) {
+            bull.drawAt(bull.address().x, bull.address().y);
+        }
+    }
 }

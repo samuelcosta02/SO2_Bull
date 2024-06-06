@@ -18,5 +18,6 @@ public class DrawingArea extends JPanel {
 		Drawing.set(pen);
 
 		Scene scene = new Scene(COLOR, WIDTH, HEIGHT, X, Y);
+		scene.draw();
 	}
 }
