@@ -36,7 +36,9 @@ public class Scene {
             Head bullHead = bull.getHead();
             if (bullHead.getEyeColor() == Color.WHITE) {
                 bullHead.changeEyeColor(Color.BLUE);
-            } else {
+            } else if(bullHead.getEyeColor() == Color.BLUE) {
+                bullHead.changeEyeColor(Color.RED);
+            } else if (bullHead.getEyeColor() == Color.RED) {
                 bullHead.changeEyeColor(Color.WHITE);
             }
         }
