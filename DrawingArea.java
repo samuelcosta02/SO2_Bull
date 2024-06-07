@@ -1,6 +1,7 @@
 package bull;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Graphics;
 import javax.swing.JPanel;
 
 public class DrawingArea extends JPanel {

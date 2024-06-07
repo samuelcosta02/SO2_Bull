@@ -1,7 +1,4 @@
 package bull;
-//Positions:
-// Standing = 0 (default)
-// Laying 	= 1
 import java.awt.Color;
 
 public class Leg {
@@ -20,15 +17,18 @@ public class Leg {
 		return position;
 	}
 
-	public void setPosition (int p){
+	public void changePosition (int p){
 		this.position = p;
-		if (p == 0){
-			this.width = this.width / 5;
-			this.height = this.height * 2;
-		} if (p == 1) {
-			this.width = this.width * 5;
-			this.height = this.height / 2;
+		if (p == 1){
+			this.width = this.width * 10;
+			this.height = this.height / 5;
+		} else if (p == 0) {
+			this.width = this.width / 10;
+			this.height = this.height * 5;
 		}
+//		int tmp = width;
+//		width = height;
+//		height = tmp;
 	}
 	public void drawAt(int x, int y) {
 		Drawing.pen().setColor(color);

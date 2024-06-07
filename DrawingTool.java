@@ -17,7 +17,7 @@ public class DrawingTool extends JFrame implements ActionListener {
 	private DrawingArea drawing;
 	private Buttons buttons = new Buttons();
 	private Dimension screenSize;
-
+	
 	public DrawingTool(String title) {
 		super(title);
 		
@@ -45,8 +45,28 @@ public class DrawingTool extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == buttons.getAddButton()) {
-			tidyUpDrawingArea();
-			drawing.getScene().addBull(Color.BLACK, RandomNumber.between(10, 500), RandomNumber.between(10, 500), RandomNumber.between(100,screenSize.width), RandomNumber.between(100,screenSize.height));
+			if (!buttons.getXt().isBlank() && !buttons.getYt().isBlank()) {
+				try {
+					int x = Integer.parseInt(buttons.getXt());
+					int y = Integer.parseInt(buttons.getYt());
+					if (x <= screenSize.width && y <= screenSize.height) {
+						tidyUpDrawingArea();
+						if (!drawing.getScene().addBull(Color.BLACK, RandomNumber.between(50, 200), RandomNumber.between(50, 200), x, y)) {
+							buttons.getMsg().setText("Bull overlap");
+						} else {
+							buttons.getMsg().setText("Success");
+						}
+					} else {
+						//OFFSCREEN	
+						buttons.getMsg().setText("Offscreen");
+					}
+				} catch (NumberFormatException nfe) {
+					buttons.getMsg().setText("Invalid");
+				}
+			} else {
+				//EMPTYFIELD
+				buttons.getMsg().setText("Empty field");
+			}
 		} else if (e.getSource() == buttons.getPostureButton()) {
 			tidyUpDrawingArea();
 			drawing.getScene().postureButton();
