@@ -6,7 +6,7 @@ import java.awt.Point;
 
 public class Scene {
     private ArrayList<Bull> bulls = new ArrayList<Bull>();
-    private final int BULLSNUMBER = 5;
+    private final int BULLSNUMBER = 20;
 
     public Scene(Color color, int width, int height, int x, int y) {
 
