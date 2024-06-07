@@ -45,6 +45,20 @@ public class Bull implements LocatedRectangle {
 		return ! disjoint ;
 	}
 
+	public void changePosture(){
+		if (legBack.getPosition() == 0 || legFront.getPosition() == 0) {
+			legBack.changePosition(1);
+			legFront.changePosition(1);
+		} if (legBack.getPosition() == 1 || legFront.getPosition() == 1){
+			legFront.changePosition(0);
+			legBack.changePosition(0);
+		}
+	}
+
+	public Head getHead(){
+		return head;
+	}
+
 	public Point address () {
 		return new Point(location.x, location.y);
 	}

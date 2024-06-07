@@ -25,6 +25,23 @@ public class Scene {
         }
     }
 
+    public void postureButton(){
+        for (Bull bull : bulls) {
+            bull.changePosture();
+        }
+    }
+
+    public void eyeColorButton(){
+        for (Bull bull : bulls) {
+            Head bullHead = bull.getHead();
+            if (bullHead.getEyeColor() == Color.WHITE) {
+                bullHead.changeEyeColor(Color.BLUE);
+            } else {
+                bullHead.changeEyeColor(Color.WHITE);
+            }
+        }
+    }
+
     private boolean vacantSpace(Bull newBull) {
         boolean anyIntersection = false ;
 

@@ -48,10 +48,10 @@ public class DrawingTool extends JFrame implements ActionListener {
 			drawing.getScene().addBull(Color.BLACK, RandomNumber.between(10, 500), RandomNumber.between(10, 500), RandomNumber.between(100,500), RandomNumber.between(100,500));
 		} else if (e.getSource() == buttons.getPostureButton()) {
 			tidyUpDrawingArea();
-			drawing.getScene().setPosture();
+			drawing.getScene().postureButton();
 		} else if (e.getSource() == buttons.getColourButton()) {
 			tidyUpDrawingArea();
-			drawing.getScene().setPosition();
+			drawing.getScene().eyeColorButton();
 		}
 	}
 

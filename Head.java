@@ -26,6 +26,15 @@ public class Head {
 		this.hornLeft = new LeftHorn(Color.BLACK, this.width / 5, this.height / 2);
 		this.hornRight = new RightHorn(Color.BLACK, this.width / 5, this.height / 2);
 	}
+
+	public void changeEyeColor(Color color){
+		eyeLeft.setColor(color);
+		eyeRight.setColor(color);
+	}
+
+	public Color getEyeColor(){
+		return eyeLeft.getColor();
+	}
 	
 	public void drawAt(int x, int y) {
 		Drawing.pen().setColor(color);
