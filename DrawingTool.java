@@ -16,6 +16,7 @@ import java.awt.event.ActionListener;
 public class DrawingTool extends JFrame implements ActionListener {
 	private DrawingArea drawing;
 	private Buttons buttons = new Buttons();
+	private Dimension screenSize;
 
 	public DrawingTool(String title) {
 		super(title);
@@ -25,7 +26,7 @@ public class DrawingTool extends JFrame implements ActionListener {
 		constructButtonMenu();
 		constructDrawingArea();
 
-		Dimension screenSize = getToolkit().getScreenSize();
+		screenSize = getToolkit().getScreenSize();
 		setBounds(0, 0, screenSize.width, screenSize.height);
 
 		setVisible(true);
@@ -45,7 +46,7 @@ public class DrawingTool extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == buttons.getAddButton()) {
 			tidyUpDrawingArea();
-			drawing.getScene().addBull(Color.BLACK, RandomNumber.between(10, 500), RandomNumber.between(10, 500), RandomNumber.between(100,500), RandomNumber.between(100,500));
+			drawing.getScene().addBull(Color.BLACK, RandomNumber.between(10, 500), RandomNumber.between(10, 500), RandomNumber.between(100,screenSize.width), RandomNumber.between(100,screenSize.height));
 		} else if (e.getSource() == buttons.getPostureButton()) {
 			tidyUpDrawingArea();
 			drawing.getScene().postureButton();

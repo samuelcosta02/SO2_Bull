@@ -20,14 +20,14 @@ public class Leg {
 		return position;
 	}
 
-	public void changePosition (int p){
+	public void setPosition (int p){
 		this.position = p;
 		if (p == 0){
-			this.width = this.width - (this.width / 5);
-			this.height = this.height + (this.height * 2);
+			this.width = this.width / 5;
+			this.height = this.height * 2;
 		} if (p == 1) {
-			this.width = this.width + (this.width * 5);
-			this.height = this.height - (this.height / 2);
+			this.width = this.width * 5;
+			this.height = this.height / 2;
 		}
 	}
 	public void drawAt(int x, int y) {
