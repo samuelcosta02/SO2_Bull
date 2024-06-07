@@ -28,8 +28,13 @@ public class Bull implements LocatedRectangle {
 		torso.drawAt(x, y);
 		head.drawAt(x + (width / 2), y - (height / 3) /2);
 		tail.drawAt(x, y + (height / 5) / 2);
-		legBack.drawAt(x + (width / 20) / 2, y + (height / 2));
-		legFront.drawAt(x + (width / 2) - ((width / 10) / 2), y + (height / 2));
+		if (legBack.getPosition() == 0 || legFront.getPosition() == 0) {
+			legBack.drawAt(x + (width / 20) / 2, y + (height / 2));
+			legFront.drawAt(x + (width / 2) - ((width / 10) / 2), y + (height / 2));
+		} if (legFront.getPosition() == 1 || legBack.getPosition() == 1) {
+			legBack.drawAt(x - (width / 10) ,y + (height / 2));
+			legFront.drawAt(x + (width / 2) - ((width / 10) / 2), y + (height / 2));
+		}
 	}
 
 	public boolean intersects (LocatedRectangle other) {
