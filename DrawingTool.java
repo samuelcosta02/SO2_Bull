@@ -73,6 +73,12 @@ public class DrawingTool extends JFrame implements ActionListener {
 		} else if (e.getSource() == buttons.getColourButton()) {
 			tidyUpDrawingArea();
 			drawing.getScene().eyeColorButton();
+		} else if (e.getSource() == buttons.getDrawFull()) {
+			tidyUpDrawingArea();
+			drawing.getScene().fullState();
+		} else if (e.getSource() == buttons.getDrawHead()) {
+			tidyUpDrawingArea();
+			drawing.getScene().headState();
 		}
 	}
 

@@ -11,6 +11,8 @@ public class Buttons {
 	private JButton addButton = new JButton("Add a bull");
 	private JButton postureButton = new JButton("Change posture");
 	private JButton colourButton = new JButton("Change eye colour");
+	private JButton drawFull = new JButton("Draw full bull");
+	private JButton drawHead = new JButton("Draw head only");
 	private JTextField xCood = new JTextField(5);
 	private JTextField yCood = new JTextField(5);
 	private JLabel msg = new JLabel("");
@@ -20,6 +22,9 @@ public class Buttons {
 		addButton.addActionListener(listener);
 		postureButton.addActionListener(listener);
 		colourButton.addActionListener(listener);
+		drawFull.addActionListener(listener);
+		drawHead.addActionListener(listener);
+
 	}
 	
 	public void addButtonsToAPanel(JFrame frame) {
@@ -37,6 +42,8 @@ public class Buttons {
 		menu.add(addButton);
 		menu.add(postureButton);
 		menu.add(colourButton);
+		menu.add(drawFull);
+		menu.add(drawHead);
 
 		menu.setBorder(BorderFactory.createRaisedBevelBorder());
 		frame.add(menu, BorderLayout.WEST);
@@ -52,6 +59,14 @@ public class Buttons {
 
 	public JButton getColourButton() {
 		return colourButton;
+	}
+
+	public JButton getDrawFull() {
+		return drawFull;
+	}
+
+	public JButton getDrawHead() {
+		return drawHead;
 	}
 	
 	public String getXt() {

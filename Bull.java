@@ -50,7 +50,7 @@ public class Bull implements LocatedRectangle {
 		if (legBack.getPosition() == 0 && legFront.getPosition() == 0) {
 			legBack.changePosition(1);
 			legFront.changePosition(1);
-		}else if (legBack.getPosition() == 1 && legFront.getPosition() == 1){
+		} else if (legBack.getPosition() == 1 && legFront.getPosition() == 1){
 			legFront.changePosition(0);
 			legBack.changePosition(0);
 		}
