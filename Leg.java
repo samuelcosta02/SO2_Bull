@@ -17,6 +17,10 @@ public class Leg {
 		return position;
 	}
 
+	public void resetPosition() {
+		this.position = 0;
+	}
+
 	public void changePosition (int p){
 		this.position = p;
 		if (p == 1){
@@ -26,9 +30,7 @@ public class Leg {
 			this.width = this.width / 10;
 			this.height = this.height * 5;
 		}
-//		int tmp = width;
-//		width = height;
-//		height = tmp;
+
 	}
 	public void drawAt(int x, int y) {
 		Drawing.pen().setColor(color);
