@@ -26,7 +26,7 @@ public class Bull implements LocatedRectangle {
 
 	public void drawAt(int x, int y) {
 		torso.drawAt(x, y);
-		head.drawAt(x + (width / 2), y - (height / 3) /2);
+		head.drawAt(x + (width / 2), y - (height / 3) / 2);
 		tail.drawAt(x, y + (height / 5) / 2);
 		if (legBack.getPosition() == 0 && legFront.getPosition() == 0) {
 			legBack.drawAt(x + (width / 20) / 2, y + (height / 2));
@@ -36,14 +36,6 @@ public class Bull implements LocatedRectangle {
 			legBack.drawAt(x - (width / 10), y + (height / 2));
 			legFront.drawAt(x + (width / 2) - ((width / 10) / 2), y + (height / 2));			
 		}
-	}
-
-	public boolean intersects (LocatedRectangle other) {
-		boolean disjoint =
-				other.address() .x + other.width() < this.address().x ||
-						other.address().x > this.address().x + this.width() ||
-						other.address().y - other.height() > this.address().y;
-		return ! disjoint ;
 	}
 
 	public void changePosture(){

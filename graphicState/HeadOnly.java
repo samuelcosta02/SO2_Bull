@@ -2,6 +2,8 @@ package bull.graphicState;
 
 import bull.Scene;
 
+import java.awt.*;
+
 public class HeadOnly extends State {
 
     private static HeadOnly instance;
@@ -20,13 +22,20 @@ public class HeadOnly extends State {
 
     @Override
     public State fullBull() {
-        context.drawFull();
+        context.setBg(Color.WHITE);
         return FullBull.getInstance(context);
     }
 
     @Override
     public State headOnly() {
-        context.drawHead();
+        context.setBg(Color.WHITE);
         return this;
     }
+
+    @Override
+    public State greenBg() {
+        context.setBg(Color.GREEN);
+        return GreenBg.getInstance(context);
+    }
+
 }

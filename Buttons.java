@@ -13,6 +13,7 @@ public class Buttons {
 	private JButton colourButton = new JButton("Change eye colour");
 	private JButton drawFull = new JButton("Draw full bull");
 	private JButton drawHead = new JButton("Draw head only");
+	private JButton greenBg = new JButton("Green background");
 	private JTextField xCood = new JTextField(5);
 	private JTextField yCood = new JTextField(5);
 	private JLabel msg = new JLabel("");
@@ -24,6 +25,7 @@ public class Buttons {
 		colourButton.addActionListener(listener);
 		drawFull.addActionListener(listener);
 		drawHead.addActionListener(listener);
+		greenBg.addActionListener(listener);
 
 	}
 	
@@ -44,6 +46,7 @@ public class Buttons {
 		menu.add(colourButton);
 		menu.add(drawFull);
 		menu.add(drawHead);
+		menu.add(greenBg);
 
 		menu.setBorder(BorderFactory.createRaisedBevelBorder());
 		frame.add(menu, BorderLayout.WEST);
@@ -67,6 +70,10 @@ public class Buttons {
 
 	public JButton getDrawHead() {
 		return drawHead;
+	}
+
+	public JButton getGreenBg() {
+		return greenBg;
 	}
 	
 	public String getXt() {

@@ -57,14 +57,12 @@ public class DrawingTool extends JFrame implements ActionListener {
 							buttons.getMsg().setText("Success");
 						}
 					} else {
-						//OFFSCREEN	
 						buttons.getMsg().setText("Offscreen");
 					}
 				} catch (NumberFormatException nfe) {
 					buttons.getMsg().setText("Invalid");
 				}
 			} else {
-				//EMPTYFIELD
 				buttons.getMsg().setText("Empty field");
 			}
 		} else if (e.getSource() == buttons.getPostureButton()) {
@@ -79,6 +77,9 @@ public class DrawingTool extends JFrame implements ActionListener {
 		} else if (e.getSource() == buttons.getDrawHead()) {
 			tidyUpDrawingArea();
 			drawing.getScene().headState();
+		} else if (e.getSource() == buttons.getGreenBg()) {
+			tidyUpDrawingArea();
+			drawing.getScene().greenState();
 		}
 	}
 

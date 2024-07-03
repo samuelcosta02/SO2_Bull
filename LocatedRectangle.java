@@ -37,10 +37,10 @@ public interface LocatedRectangle {
     }
 
     private boolean above(LocatedRectangle other, int margin) {
-        return this.address().y - this.height() - margin > other.address().y;
+        return this.address().y + this.height() + margin <= other.address().y;
     }
 
     private boolean below(LocatedRectangle other, int margin) {
-        return this.address().y < other.address().y - other.height() - margin;
+        return this.address().y >= other.address().y + other.height() + margin;
     }
 }

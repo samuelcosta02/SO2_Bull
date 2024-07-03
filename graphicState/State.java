@@ -8,8 +8,10 @@ public abstract class State {
 
     protected static FullBull fullBull;
     protected static HeadOnly headOnly;
+    protected static GreenBg greenBg;
 
     public abstract State fullBull();
     public abstract State headOnly();
+    public abstract State greenBg();
 
 }
